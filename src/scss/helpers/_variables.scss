@@ -1,0 +1,18 @@
+:root {
+  --backgroud: #F6F6F6;
+  --primary-color: #F53838;
+  --primary-color-text: #0B132A;
+  --secondary-color-text: #4F5665;
+  --rr: Rubik-Regular;
+  --rm: Rubik-Medium;
+  --rb: Rubik-Bold;
+  --sf: sans-serif
+}
+
+$breakpoints: (
+        xs: 30em,
+        s: 37.5em,
+        m: 48em,
+        l: 64em,
+        xl:75em
+);

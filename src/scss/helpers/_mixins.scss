@@ -1,0 +1,59 @@
+@mixin min-mq($bp) {
+  @if map_has_key($breakpoints, $bp) {
+    $bp-val: map_get($breakpoints, $bp);
+    @media (min-width: $bp-val){
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$bp}';
+  }
+}
+
+@mixin max-mq($bp) {
+  @if map_has_key($breakpoints, $bp) {
+    $bp-val: map_get($breakpoints, $bp);
+    @media (max-width: ($bp-val - 1)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$bp}';
+  }
+}
+
+@mixin btw-mq($lower, $upper) {
+  @if map_has_key($breakpoints, $lower) and map_has_key($breakpoints, $upper) {
+    $l-bp: map_get($breakpoints, $lower);
+    $u-bp: map_get($breakpoints, $upper);
+    @media (min-width: $l-bp) and (max-width: ($u-bp - 1)) {
+      @content;
+    }
+  } @else {
+    @if (map_has_key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}';
+    }
+    @if (map_has_key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}';
+    }
+  }
+}
+
+@mixin btn {
+  text-decoration: none;
+  background: rgb(168,38,84);
+  background: linear-gradient(24deg, rgba(168,38,84,1) 0%, rgba(250,137,105,1) 100%);
+  padding: 15px 60px;
+  border-radius: 25px;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid transparent;
+}
+
+@mixin btn-hover {
+  color: var(--secondary-color);
+  background: transparent;
+  border: 1px solid rgb(168,38,84);
+  -webkit-transition: background 2s ease-in-out;
+  -moz-transition: background 2s ease-in-out;
+  -o-transition: background 2s ease-in-out;
+  transition: background 2s ease-in-out;
+}

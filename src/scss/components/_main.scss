@@ -1,0 +1,21 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background-color: var(--bg-color);
+  height: 100vh;
+
+  .navbar {
+    font-family: var(--rm), var(--sf);
+    padding-top: 30px;
+
+    .nav-link {
+      color: var(--secondary-color);
+    }
+  }
+}

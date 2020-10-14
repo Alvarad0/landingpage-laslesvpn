@@ -6,16 +6,220 @@
   margin: 0;
 }
 
+.txt-page {
+  font-family: var(--rr), var(--sf);
+  font-size: 16px;
+  color: var(--secondary-color-text);
+}
+
 .main {
   background-color: var(--bg-color);
-  height: 100vh;
 
-  .navbar {
-    font-family: var(--rm), var(--sf);
-    padding-top: 30px;
+  .logo-text {
+    display: flex;
+    font-size: 20px;
+    color: var(--primary-color-text);
+
+    p {
+      margin: .5rem 0 0 .5rem;
+      font-family: var(--rm), var(--sf);
+    }
+
+    span {
+      font-family: var(--rb), var(--sf);
+    }
+  }
+
+  .navbar-nav {
+    font-size: 16px;
+  }
+
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: var(--rr), var(--sf);
+    font-size: 16px;
+
+    @include max-mq(l) {
+      position: initial;
+      left: 0;
+      transform: initial;
+    }
 
     .nav-link {
-      color: var(--secondary-color);
+      color: var(--secondary-color-text);
+    }
+  }
+
+  .nav-right {
+    position: absolute;
+    right: 0;
+    font-family: var(--rm), var(--sf);
+
+    @include max-mq(l) {
+      position: initial;
+      left: 0;
+      transform: initial;
+    }
+
+    .nav-item:last-child {
+      padding-left: 2rem;
+
+      @include max-mq(l) {
+        padding-left: 0;
+      }
+    }
+
+    li:first-child {
+      .nav-link {
+        color: var(--primary-color-text);
+      }
+    }
+
+    li:last-child {
+      .nav-link {
+        color: var(--primary-color);
+        display: inline-flex;
+        border: 1px solid var(--primary-color);
+        border-radius: 35px;
+        padding: 8px 50px;
+
+        &:hover {
+          text-shadow: 0 0 1em var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    @include ani-ease;
+
+    &:hover {
+      text-shadow: 0 0 1em var(--primary-color-text);
+    }
+  }
+
+  /*section Intro*/
+  .container {
+    @include max-mq(m) {
+      width: 90%;
+    }
+  }
+
+  .info {
+    display: flex;
+    padding-top: 5rem;
+    margin-bottom: 10rem;
+
+    @include max-mq(l) {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .left {
+      width: 50%;
+
+      @include max-mq(l) {
+        width: 100%;
+      }
+
+      p:first-child {
+        font-family: var(--rm), var(--sf);
+        color: var(--primary-color-text);
+        font-size: 50px;
+
+        span {
+          font-family: var(--rb), var(--sf);
+        }
+      }
+
+      a {
+        display: inline-flex;
+        justify-content: center;
+        font-family: var(--rb), var(--sf);
+        font-size: 16px;
+        border-radius: 10px;
+        padding: .9em 4em;
+        text-decoration: none;
+        background: var(--primary-color);
+        color: #ffffff;
+        box-shadow: 0 21px 45px 10px rgba(245, 56, 56, .35);
+
+        @include ani-ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+    }
+  }
+
+  .counters {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 74px 93px -12px rgba(13, 16, 37, .1);
+    padding: 60px 0;
+
+    @include max-mq(m) {
+      flex-direction: column;
+      padding: 0;
+      margin: 60px 0;
+    }
+
+    .box {
+      display: flex;
+      width: 33%;
+      justify-content: center;
+      border-right: 2px solid #EEEFF2;
+
+      @include max-mq(m) {
+        width: auto;
+        border-right: 0;
+        border-bottom: 2px solid #EEEFF2;
+        justify-content: initial;
+        padding: 1em 2em;
+
+        @include ani-ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &:last-child {
+        border-right: 0;
+        border-bottom: 0;
+      }
+
+      span {
+        color: var(--primary-color);
+        background-color: #FFECEC;
+        border-radius: 70px;
+        width: 55px;
+        height: 55px;
+        display: inline-block;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      .number {
+        font-family: var(--rb), var(--sf);
+        font-size: 25px;
+        color: var(--primary-color-text);
+      }
+
+      .txt-box {
+        font-family: var(--rr), var(--sf);
+        font-size: 20px;
+        color: var(--secondary-color-text);
+      }
     }
   }
 }

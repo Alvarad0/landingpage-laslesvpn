@@ -10,9 +10,9 @@
 }
 
 $breakpoints: (
-        xs: 30em,
-        s: 37.5em,
-        m: 48em,
-        l: 64em,
-        xl:75em
+        xs: 0,
+        s: 576px,
+        m: 768px,
+        l: 992px,
+        xl:1200px
 );

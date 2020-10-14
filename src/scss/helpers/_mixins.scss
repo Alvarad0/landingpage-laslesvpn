@@ -37,6 +37,10 @@
   }
 }
 
+@mixin ani-ease {
+  transition: all ease-in-out .3s;
+}
+
 @mixin btn {
   text-decoration: none;
   background: rgb(168,38,84);

@@ -1,0 +1,78 @@
+.pricing {
+  text-align: center;
+  padding-top: 3rem;
+
+  .box-pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    .box {
+      border-radius: 10px;
+      border: 2px solid #DDDDDD;
+      width: 30%;
+      background-color: #ffffff;
+      flex-direction: column;
+      justify-content: space-between;
+      display: flex;
+      @include ani-ease;
+
+      &:hover {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.1);
+
+        a {
+          background-color: var(--primary-color);
+          color: #ffffff;
+          box-shadow: 0 9px 60px -6px var(--primary-color);
+        }
+      }
+
+      img {
+        margin: 2rem 0;
+      }
+
+      .txtfp {
+        font-size: 18px;
+      }
+
+      .txtf {
+        font-size: 25px;
+
+        span {
+          font-family: var(--rr), var(--sf);
+          color: var(--secondary-color-text);
+        }
+      }
+
+      ul {
+        font-size: 14px;
+        list-style: none;
+        text-align: left;
+        padding: 0 12.5%;
+        margin: 1rem 0 3rem 0;
+
+        li {
+          line-height: 40px;
+        }
+
+        li > svg {
+          color: var(--success);
+          padding-right: 10px;
+        }
+      }
+
+      a {
+        display: inline-flex;
+        padding: .4rem 3.5rem;
+        color: var(--primary-color);
+        border-radius: 50px;
+        border: 2px solid var(--primary-color);
+        font-family: var(--rb), var(--sf);
+        font-size: 16px;
+        text-decoration: none;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

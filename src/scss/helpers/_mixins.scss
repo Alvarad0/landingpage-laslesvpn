@@ -41,6 +41,10 @@
   transition: all ease-in-out .3s;
 }
 
+@mixin shadow {
+  box-shadow: 0 74px 93px -12px rgba(13, 16, 37, .1);
+}
+
 @mixin btn {
   text-decoration: none;
   background: rgb(168,38,84);

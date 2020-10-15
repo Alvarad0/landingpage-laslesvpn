@@ -1,0 +1,33 @@
+.features {
+  box-shadow: 0 74px 93px -12px rgba(13, 16, 37, 0.03);
+  padding-bottom: 5rem;
+
+  .container {
+    display: flex;
+    padding-top: 8rem;
+  }
+
+  .left {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+    ul {
+      font-size: 14px;
+
+      li {
+        list-style: none;
+        line-height: 35px;
+
+        svg {
+          color: var(--success);
+        }
+      }
+    }
+  }
+}

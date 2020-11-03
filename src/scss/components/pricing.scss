@@ -98,11 +98,11 @@
   img {
     margin: 0 auto;
   }
-}
 
-.owl-carousel .owl-item img {
-  width: 70% !important;
-  @include max-mq(m) {
-    width: 100% !important;
+  .owl-carousel .owl-item img {
+    width: 70% !important;
+    @include max-mq(m) {
+      width: 100% !important;
+    }
   }
 }

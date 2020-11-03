@@ -28,23 +28,23 @@ body {
   font-size: 35px;
 }
 
+.logo-text {
+  display: flex;
+  font-size: 20px;
+  color: var(--primary-color-text);
+
+  p {
+    margin: .5rem 0 0 .5rem;
+    font-family: var(--rm), var(--sf);
+  }
+
+  span {
+    font-family: var(--rb), var(--sf);
+  }
+}
+
 .main {
   background-color: var(--bg-color);
-
-  .logo-text {
-    display: flex;
-    font-size: 20px;
-    color: var(--primary-color-text);
-
-    p {
-      margin: .5rem 0 0 .5rem;
-      font-family: var(--rm), var(--sf);
-    }
-
-    span {
-      font-family: var(--rb), var(--sf);
-    }
-  }
 
   .navbar-nav {
     font-size: 16px;
@@ -146,21 +146,11 @@ body {
       }
 
       a {
-        display: inline-flex;
-        justify-content: center;
-        font-family: var(--rb), var(--sf);
-        font-size: 16px;
-        border-radius: 10px;
-        padding: .9em 4em;
-        text-decoration: none;
-        background: var(--primary-color);
-        color: #ffffff;
-        box-shadow: 0 21px 45px 10px rgba(245, 56, 56, .35);
-
         @include ani-ease;
+        @include btn;
 
         &:hover {
-          transform: scale(1.1);
+          @include btn-hover;
         }
       }
     }

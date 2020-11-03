@@ -31,7 +31,7 @@ export const carouselComments = () => {
             0:{
                 items:1
             },
-            650:{
+            800:{
                 items:2
             },
             948:{

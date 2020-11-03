@@ -1,0 +1,117 @@
+.help {
+  background-color: var(--backgroud);
+
+  .newsletter {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 60px 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 70px -12px rgba(13, 16, 37, 0.1);
+
+    @include max-mq(m) {
+      flex-direction: column;
+      padding: 0;
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .left {
+      width: 50%;
+
+      @include max-mq(m) {
+        width: 100%;
+      }
+    }
+
+    .right {
+      a {
+        @include ani-ease;
+        @include btn;
+
+        &:hover {
+          @include btn-hover;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    padding: 3rem 0;
+
+    @include max-mq(m) {
+      display: block;
+    }
+
+    .left {
+      width: 50%;
+
+      @include max-mq(m) {
+        width: 100%;
+      }
+
+      a {
+        margin: 1rem 0;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--primary-color-text);
+        }
+      }
+
+      .social-media {
+        display: inline-flex;
+        padding: 1rem 0;
+
+        div {
+          width: 30px;
+          height: 30px;
+          background-color: #ffffff;
+          color: var(--primary-color);
+          border-radius: 50%;
+          box-shadow: 0 0 10px 10px rgba(13, 16, 37, 0.1);
+          text-align: center;
+          margin: 0 11px;
+          cursor: pointer;
+          @include ani-ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .copyright {
+        color: #AFB5C0 !important;
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+
+      @include max-mq(m) {
+        width: 100%;
+      }
+
+      p {
+        font-family: var(--rm), var(--sf);
+        font-size: 18px;
+        color: var(--primary-color-text);
+      }
+
+      ul li {
+        cursor: pointer;
+        list-style: none;
+        line-height: 35px;
+        @include ani-ease;
+
+        &:hover {
+          text-shadow: 0 0 1em var(--primary-color-text);
+        }
+      }
+    }
+  }
+}

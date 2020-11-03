@@ -6,8 +6,14 @@
   margin: 0;
 }
 
+.container {
+  @include max-mq(m) {
+    width: 90%;
+  }
+}
+
 body {
-  background-color: var(--backgroud);
+  background-color: #ffffff;
 }
 
 .txt-page {
@@ -111,12 +117,6 @@ body {
   }
 
   /*section Intro*/
-  .container {
-    @include max-mq(m) {
-      width: 90%;
-    }
-  }
-
   .info {
     display: flex;
     padding-top: 5rem;

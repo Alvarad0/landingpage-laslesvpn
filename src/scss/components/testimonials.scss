@@ -1,0 +1,126 @@
+.testimonials {
+  margin-top: 5rem;
+  text-align: center;
+
+  .comments {
+    margin-top: 3rem;
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-item {
+      display: flex;
+      flex: 1 0 auto;
+    }
+
+    .owl-dots {
+      float: left;
+
+      .owl-dot {
+        background-color: #DDE0E4;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        margin: 0 2px;
+        @include ani-ease;
+
+        &.active {
+          background-color: var(--primary-color);
+          width: 50px !important;
+          height: 13px !important;
+          border-radius: 8px !important;
+        }
+      }
+    }
+
+    .owl-nav {
+      float: right;
+
+      button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 2px solid var(--primary-color) !important;
+        color: var(--primary-color) !important;
+        background-color: #ffffff !important;
+        margin: 5px 2px;
+        @include ani-ease;
+
+        &:hover {
+          background-color: var(--primary-color) !important;
+          color: #ffffff !important;
+        }
+
+        span {
+          display: inline-block;
+          font-size: 43px;
+          margin-top: -17px;
+        }
+      }
+    }
+
+    .box-comment {
+      border-radius: 10px;
+      border: 2px solid #DDDDDD;
+      padding: 1.5%;
+      @include ani-ease;
+
+      &:hover {
+        border: 2px solid var(--primary-color);
+      }
+
+      .people {
+        display: grid;
+        grid-template-columns: 20% 55% 25%;
+
+        img {
+          width: 50px;
+          height: 51px;
+        }
+
+        .name-people {
+          line-height: 2px;
+          margin-top: 7%;
+          text-align: left;
+
+          p:first-child {
+            font-family: var(--rm), var(--sf);
+            font-size: 18px;
+          }
+
+          p:last-child {
+            font-family: var(--rr), var(--sf);
+            font-size: 14px;
+            color: var(--secondary-color-text);
+          }
+        }
+
+        span {
+          font-family: var(--rr), var(--sf);
+          font-size: 16px;
+
+          svg {
+            color: #FEA250;
+          }
+        }
+      }
+
+      p:last-child {
+        margin-top: 1rem;
+        text-align: left;
+      }
+    }
+
+    #owlComments .item {
+      background: #3fbf79;
+      padding: 30px 0px;
+      margin: 10px;
+      color: #FFF;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+    }
+  }
+}

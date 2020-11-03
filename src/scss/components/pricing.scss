@@ -6,20 +6,26 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
 
     .box {
       border-radius: 10px;
       border: 2px solid #DDDDDD;
-      width: 30%;
+      width: 313px;
       background-color: #ffffff;
       flex-direction: column;
       justify-content: space-between;
       display: flex;
+      margin-top: 1rem;
       @include ani-ease;
+      @include max-mq(m) {
+        width: 100%;
+      }
 
       &:hover {
         border: 2px solid var(--primary-color);
-        transform: scale(1.1);
+        transform: scale(1.03, 1.03);
 
         a {
           background-color: var(--primary-color);
@@ -64,7 +70,7 @@
 
       a {
         display: inline-flex;
-        padding: .4rem 3.5rem;
+        padding: 3% 24%;
         color: var(--primary-color);
         border-radius: 50px;
         border: 2px solid var(--primary-color);
@@ -74,5 +80,29 @@
         margin-bottom: 2rem;
       }
     }
+  }
+}
+
+.map {
+  margin-top: 5rem;
+
+  img {
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+.companies {
+  margin-top: 8rem;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.owl-carousel .owl-item img {
+  width: 70% !important;
+  @include max-mq(m) {
+    width: 100% !important;
   }
 }
